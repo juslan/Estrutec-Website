@@ -1,4 +1,4 @@
-import { MapPin, Phone, Printer, Mail } from 'lucide-react'
+import { MapPin, Phone, MessageCircle, Mail } from 'lucide-react'
 
 const INFO = [
   {
@@ -7,12 +7,17 @@ const INFO = [
     value: 'Av. Circunvalación esq. Max Fernández Nº 1212, Zona Arocagua, Cochabamba - Bolivia',
   },
   { icon: Phone, label: 'Teléfono', value: '(591 4) 471-6506', href: 'tel:+59144716506' },
-  { icon: Printer, label: 'Fax', value: '(591 4) 471-5902' },
+  {
+    icon: MessageCircle,
+    label: 'WhatsApp',
+    value: '769 74555',
+    href: 'https://wa.me/59176974555',
+  },
   {
     icon: Mail,
     label: 'Correo',
-    value: 'grupoestrutec@hotmail.com',
-    href: 'mailto:grupoestrutec@hotmail.com',
+    value: 'info@estrutec.com.bo',
+    href: 'mailto:info@estrutec.com.bo',
   },
 ]
 
@@ -57,7 +62,7 @@ export default function Contact() {
           </div>
 
           <form
-            action="mailto:grupoestrutec@hotmail.com"
+            action="mailto:info@estrutec.com.bo"
             method="post"
             encType="text/plain"
             className="lg:col-span-3 bg-white border border-paper-sunken rounded-xl p-8 space-y-5"

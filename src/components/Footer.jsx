@@ -1,4 +1,4 @@
-import { MapPin, Phone, Mail } from 'lucide-react'
+import { MapPin, Phone, MessageCircle, Mail } from 'lucide-react'
 import icon from '../assets/estrutec-icon.png'
 
 const LINKS = [
@@ -53,9 +53,15 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex gap-2">
+                <MessageCircle size={16} className="shrink-0 mt-0.5 text-brand-orange-light" />
+                <a href="https://wa.me/59176974555" className="hover:text-white">
+                  WhatsApp: 769 74555
+                </a>
+              </li>
+              <li className="flex gap-2">
                 <Mail size={16} className="shrink-0 mt-0.5 text-brand-orange-light" />
-                <a href="mailto:grupoestrutec@hotmail.com" className="hover:text-white">
-                  grupoestrutec@hotmail.com
+                <a href="mailto:info@estrutec.com.bo" className="hover:text-white">
+                  info@estrutec.com.bo
                 </a>
               </li>
             </ul>
