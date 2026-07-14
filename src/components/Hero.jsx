@@ -1,5 +1,8 @@
-import { ArrowRight, MapPin } from 'lucide-react'
+import { ArrowRight, MapPin, MessageCircle } from 'lucide-react'
 import heroImg from '../assets/projects/hero-torre-alta-tension.jpg'
+
+const WHATSAPP_URL =
+  'https://wa.me/59176974555?text=Hola%2C%20quisiera%20solicitar%20una%20cotizaci%C3%B3n%20para%20mi%20proyecto.'
 
 export default function Hero() {
   return (
@@ -40,9 +43,12 @@ export default function Hero() {
               <ArrowRight size={18} />
             </a>
             <a
-              href="#contacto"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-6 py-3.5 rounded backdrop-blur-sm transition-colors"
             >
+              <MessageCircle size={18} />
               Solicitar cotización
             </a>
           </div>

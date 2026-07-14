@@ -10,6 +10,9 @@ const LINKS = [
   { href: '#contacto', label: 'Contacto' },
 ]
 
+const WHATSAPP_URL =
+  'https://wa.me/59176974555?text=Hola%2C%20quisiera%20solicitar%20una%20cotizaci%C3%B3n%20para%20mi%20proyecto.'
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
@@ -54,7 +57,9 @@ export default function Header() {
               (591 4) 471-6506
             </a>
             <a
-              href="#contacto"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-brand-red hover:bg-brand-red-dark text-white text-sm font-bold px-5 py-2.5 rounded transition-colors"
             >
               Solicitar cotización
@@ -87,7 +92,9 @@ export default function Header() {
               </a>
             ))}
             <a
-              href="#contacto"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setOpen(false)}
               className="mt-3 text-center bg-brand-red text-white font-bold px-5 py-3 rounded"
             >

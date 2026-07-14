@@ -1,4 +1,5 @@
-import { MapPin, Phone, MessageCircle, Mail } from 'lucide-react'
+import { useState } from 'react'
+import { MapPin, Phone, MessageCircle, Mail, Loader2, CircleCheck, CircleAlert } from 'lucide-react'
 
 const INFO = [
   {
@@ -22,6 +23,37 @@ const INFO = [
 ]
 
 export default function Contact() {
+  const [status, setStatus] = useState('idle') // idle | sending | sent | error
+  const [errorMsg, setErrorMsg] = useState('')
+
+  async function handleSubmit(e) {
+    e.preventDefault()
+    setStatus('sending')
+    setErrorMsg('')
+
+    const form = e.target
+    const payload = Object.fromEntries(new FormData(form).entries())
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}))
+        throw new Error(data.error || 'No se pudo enviar el mensaje.')
+      }
+
+      setStatus('sent')
+      form.reset()
+    } catch (err) {
+      setStatus('error')
+      setErrorMsg(err.message)
+    }
+  }
+
   return (
     <section id="contacto" className="py-24 bg-paper-sunken">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,9 +94,7 @@ export default function Contact() {
           </div>
 
           <form
-            action="mailto:info@estrutec.com.bo"
-            method="post"
-            encType="text/plain"
+            onSubmit={handleSubmit}
             className="lg:col-span-3 bg-white border border-paper-sunken rounded-xl p-8 space-y-5"
           >
             <div className="grid sm:grid-cols-2 gap-5">
@@ -121,10 +151,25 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="w-full sm:w-auto bg-brand-red hover:bg-brand-red-dark text-white font-bold px-8 py-3 rounded transition-colors"
+              disabled={status === 'sending'}
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-brand-red hover:bg-brand-red-dark disabled:opacity-60 text-white font-bold px-8 py-3 rounded transition-colors"
             >
-              Enviar mensaje
+              {status === 'sending' && <Loader2 size={18} className="animate-spin" />}
+              {status === 'sending' ? 'Enviando…' : 'Enviar mensaje'}
             </button>
+
+            {status === 'sent' && (
+              <p className="flex items-center gap-2 text-sm font-semibold text-emerald-600">
+                <CircleCheck size={18} />
+                Mensaje enviado. Te contactaremos pronto.
+              </p>
+            )}
+            {status === 'error' && (
+              <p className="flex items-center gap-2 text-sm font-semibold text-brand-red">
+                <CircleAlert size={18} />
+                {errorMsg}
+              </p>
+            )}
           </form>
         </div>
       </div>
