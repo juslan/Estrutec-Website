@@ -50,16 +50,11 @@ export default function Hero() {
           </a>
         </div>
 
-        <dl className="grid grid-cols-3 gap-6 w-full max-w-lg border-t border-white/20 pt-8">
+        <dl className="grid grid-cols-2 gap-6 w-full max-w-sm border-t border-white/20 pt-8">
           <div>
             <dt className="sr-only">Año de fundación</dt>
             <dd className="font-display text-3xl font-extrabold text-white">2005</dd>
             <p className="text-xs text-white/70 mt-1">Fundada en Cochabamba</p>
-          </div>
-          <div>
-            <dt className="sr-only">Líneas de negocio</dt>
-            <dd className="font-display text-3xl font-extrabold text-white">2</dd>
-            <p className="text-xs text-white/70 mt-1">Obras civiles y metalmecánica</p>
           </div>
           <div>
             <dt className="sr-only">Clientes que confiaron</dt>
