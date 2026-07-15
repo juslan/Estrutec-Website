@@ -1,6 +1,6 @@
 import { ArrowRight, MessageCircle } from 'lucide-react'
 import heroImg from '../assets/projects/hero-oficina-estrutec.jpg'
-import logo from '../assets/estrutec-logo.png'
+import logo from '../assets/estrutec-logo-white.png'
 
 const WHATSAPP_URL =
   'https://wa.me/59176974555?text=Hola%2C%20quisiera%20solicitar%20una%20cotizaci%C3%B3n%20para%20mi%20proyecto.'
