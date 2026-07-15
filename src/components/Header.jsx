@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react'
-import { Menu, X, Phone } from 'lucide-react'
+import { Menu, X, MessageCircle } from 'lucide-react'
 import logo from '../assets/estrutec-logo.png'
 
 const LINKS = [
   { href: '#nosotros', label: 'Nosotros' },
   { href: '#servicios', label: 'Servicios' },
   { href: '#proyectos', label: 'Proyectos' },
-  { href: '#clientes', label: 'Clientes' },
   { href: '#contacto', label: 'Contacto' },
 ]
 
@@ -50,11 +49,13 @@ export default function Header() {
 
           <div className="hidden lg:flex items-center gap-5">
             <a
-              href="tel:+59144716506"
+              href={WHATSAPP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm font-semibold text-ink-soft hover:text-brand-blue transition-colors"
             >
-              <Phone size={16} className="text-brand-orange" />
-              (591 4) 471-6506
+              <MessageCircle size={16} className="text-brand-orange" />
+              +591 769 74555
             </a>
             <a
               href={WHATSAPP_URL}

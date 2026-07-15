@@ -1,5 +1,5 @@
 import { Target, Eye } from 'lucide-react'
-import officeImg from '../assets/projects/oficina-estrutec.jpg'
+import stairsImg from '../assets/projects/nosotros-escalera.jpg'
 
 export default function About() {
   return (
@@ -45,13 +45,13 @@ export default function About() {
 
           <div className="relative">
             <img
-              src={officeImg}
-              alt="Oficinas centrales de Estrutec S.R.L. en Cochabamba"
-              className="rounded-xl shadow-xl w-full h-auto object-cover"
+              src={stairsImg}
+              alt="Detalle de las escaleras en las oficinas de Estrutec, construidas por la propia empresa"
+              className="rounded-xl shadow-xl w-full h-[420px] sm:h-[520px] object-cover"
             />
-            <div className="absolute -bottom-6 -left-6 bg-brand-blue text-white rounded-lg px-6 py-4 shadow-lg hidden sm:block">
-              <p className="font-display text-2xl font-extrabold leading-none">Cochabamba</p>
-              <p className="text-xs text-white/75 mt-1">Av. Circunvalación esq. Max Fernández</p>
+            <div className="absolute -bottom-6 -left-6 bg-brand-blue text-white rounded-lg px-6 py-4 shadow-lg hidden sm:block max-w-[220px]">
+              <p className="font-display text-lg font-extrabold leading-snug">Oficinas propias</p>
+              <p className="text-xs text-white/75 mt-1">Diseñadas y construidas por nuestro propio equipo</p>
             </div>
           </div>
         </div>
