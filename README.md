@@ -27,12 +27,8 @@ Copia `.env.example` a `.env` y completa:
 
 - `RESEND_API_KEY` — API key de Resend (Dashboard → API Keys)
 - `CONTACT_TO_EMAIL` — opcional, destino de los mensajes (por defecto `info@estrutec.com.bo`)
-- `CONTACT_FROM_EMAIL` — opcional, remitente (por defecto el sandbox de Resend)
-
-**Importante:** hasta que se verifique el dominio `estrutec.com.bo` en
-[resend.com/domains](https://resend.com/domains), Resend solo permite enviar correos de prueba a
-la dirección dueña de la cuenta. Una vez verificado el dominio, cambia `CONTACT_FROM_EMAIL` a algo
-como `Estrutec <noreply@estrutec.com.bo>`.
+- `CONTACT_FROM_EMAIL` — opcional, remitente (por defecto `noreply@estrutec.com.bo`, dominio ya
+  verificado en Resend)
 
 En Vercel, configura estas variables en Project Settings → Environment Variables (nunca las subas
 al repositorio).

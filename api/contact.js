@@ -3,7 +3,7 @@ import { Resend } from 'resend'
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 const TO_EMAIL = process.env.CONTACT_TO_EMAIL || 'info@estrutec.com.bo'
-const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || 'Estrutec Web <onboarding@resend.dev>'
+const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || 'Estrutec Web <noreply@estrutec.com.bo>'
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
