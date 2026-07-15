@@ -1,7 +1,5 @@
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
-
 const TO_EMAIL = process.env.CONTACT_TO_EMAIL || 'info@estrutec.com.bo'
 const FROM_EMAIL = process.env.CONTACT_FROM_EMAIL || 'Estrutec Web <noreply@estrutec.com.bo>'
 
@@ -11,6 +9,11 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Método no permitido' })
   }
 
+  if (!process.env.RESEND_API_KEY) {
+    console.error('RESEND_API_KEY no está configurada en las variables de entorno.')
+    return res.status(500).json({ error: 'El servidor no está configurado correctamente.' })
+  }
+
   const { nombre, email, telefono, mensaje } = req.body ?? {}
 
   if (!nombre || !email || !mensaje) {
@@ -18,6 +21,7 @@ export default async function handler(req, res) {
   }
 
   try {
+    const resend = new Resend(process.env.RESEND_API_KEY)
     await resend.emails.send({
       from: FROM_EMAIL,
       to: TO_EMAIL,
