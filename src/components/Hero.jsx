@@ -62,9 +62,9 @@ export default function Hero() {
             <p className="text-xs text-white/70 mt-1">Obras civiles y metalmecánica</p>
           </div>
           <div>
-            <dt className="sr-only">Empresas que confiaron</dt>
-            <dd className="font-display text-3xl font-extrabold text-white">12+</dd>
-            <p className="text-xs text-white/70 mt-1">Empresas que confiaron en Estrutec</p>
+            <dt className="sr-only">Clientes que confiaron</dt>
+            <dd className="font-display text-3xl font-extrabold text-white">160+</dd>
+            <p className="text-xs text-white/70 mt-1">Clientes que confiaron en Estrutec</p>
           </div>
         </dl>
       </div>
