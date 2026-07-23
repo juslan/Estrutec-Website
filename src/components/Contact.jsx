@@ -1,15 +1,21 @@
 import { useState } from 'react'
-import { MapPin, Phone, MessageCircle, Mail, Loader2, CircleCheck, CircleAlert } from 'lucide-react'
+import { MapPin, Phone, Mail, Loader2, CircleCheck, CircleAlert } from 'lucide-react'
+import WhatsAppIcon from './icons/WhatsAppIcon'
+
+const MAPS_LINK =
+  'https://www.google.com/maps/place/Estrutec+S.R.L./@-17.3741299,-66.1059649,17z/data=!4m2!3m1!1s0x93e376cfe2c76d35:0xc249820e6ed40f37'
+const MAPS_EMBED_SRC = 'https://www.google.com/maps?q=-17.3741299,-66.1059649&z=17&output=embed'
 
 const INFO = [
   {
     icon: MapPin,
     label: 'Dirección',
     value: 'Av. Circunvalación esq. Max Fernández Nº 1212, Zona Arocagua, Cochabamba - Bolivia',
+    href: MAPS_LINK,
   },
   { icon: Phone, label: 'Teléfono', value: '(591 4) 471-6506', href: 'tel:+59144716506' },
   {
-    icon: MessageCircle,
+    icon: WhatsAppIcon,
     label: 'WhatsApp',
     value: '769 74555',
     href: 'https://wa.me/59176974555',
@@ -91,6 +97,18 @@ export default function Contact() {
                 </div>
               </div>
             ))}
+
+            <div className="rounded-lg overflow-hidden border border-paper-sunken bg-white h-56">
+              <iframe
+                title="Ubicación de Estrutec S.R.L. en Cochabamba"
+                src={MAPS_EMBED_SRC}
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
 
           <form

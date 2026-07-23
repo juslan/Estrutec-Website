@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
-import { Menu, X, MessageCircle } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import logo from '../assets/estrutec-logo.png'
+import WhatsAppIcon from './icons/WhatsAppIcon'
 
 const LINKS = [
   { href: '#nosotros', label: 'Nosotros' },
@@ -54,7 +55,7 @@ export default function Header() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm font-semibold text-ink-soft hover:text-brand-blue transition-colors"
             >
-              <MessageCircle size={16} className="text-brand-orange" />
+              <WhatsAppIcon size={16} className="text-brand-orange" />
               +591 769 74555
             </a>
             <a

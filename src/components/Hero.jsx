@@ -1,6 +1,7 @@
-import { ArrowRight, MessageCircle } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import heroImg from '../assets/projects/hero-oficina-estrutec.jpg'
 import logo from '../assets/estrutec-logo-white.png'
+import WhatsAppIcon from './icons/WhatsAppIcon'
 
 const WHATSAPP_URL =
   'https://wa.me/59176974555?text=Hola%2C%20quisiera%20solicitar%20una%20cotizaci%C3%B3n%20para%20mi%20proyecto.'
@@ -45,7 +46,7 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-6 py-3.5 rounded backdrop-blur-sm transition-colors"
           >
-            <MessageCircle size={18} />
+            <WhatsAppIcon size={18} />
             Solicitar cotización
           </a>
         </div>

@@ -1,5 +1,9 @@
-import { MapPin, Phone, MessageCircle, Mail } from 'lucide-react'
+import { MapPin, Phone, Mail } from 'lucide-react'
 import icon from '../assets/estrutec-icon.png'
+import WhatsAppIcon from './icons/WhatsAppIcon'
+
+const MAPS_LINK =
+  'https://www.google.com/maps/place/Estrutec+S.R.L./@-17.3741299,-66.1059649,17z/data=!4m2!3m1!1s0x93e376cfe2c76d35:0xc249820e6ed40f37'
 
 const LINKS = [
   { href: '#nosotros', label: 'Nosotros' },
@@ -43,7 +47,9 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li className="flex gap-2">
                 <MapPin size={16} className="shrink-0 mt-0.5 text-brand-orange-light" />
-                Av. Circunvalación esq. Max Fernández Nº 1212, Cochabamba - Bolivia
+                <a href={MAPS_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+                  Av. Circunvalación esq. Max Fernández Nº 1212, Cochabamba - Bolivia
+                </a>
               </li>
               <li className="flex gap-2">
                 <Phone size={16} className="shrink-0 mt-0.5 text-brand-orange-light" />
@@ -52,7 +58,7 @@ export default function Footer() {
                 </a>
               </li>
               <li className="flex gap-2">
-                <MessageCircle size={16} className="shrink-0 mt-0.5 text-brand-orange-light" />
+                <WhatsAppIcon size={16} className="shrink-0 mt-0.5 text-brand-orange-light" />
                 <a href="https://wa.me/59176974555" className="hover:text-white">
                   WhatsApp: 769 74555
                 </a>
