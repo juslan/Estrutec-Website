@@ -1,10 +1,10 @@
 import { MapPin } from 'lucide-react'
 import sanLuis from '../assets/projects/proyecto-san-luis-tarija.jpg'
-import cocib from '../assets/projects/proyecto-cocib-tarija.jpg'
+import estadio from '../assets/projects/proyecto-estadio-felix-capriles.jpg'
 import torres from '../assets/projects/proyecto-torres-shinahota.jpg'
-import domo from '../assets/projects/proyecto-coliseo-domo.jpg'
+import domo from '../assets/projects/proyecto-coliseo-guadalquivir-tarija.jpg'
 import estacion from '../assets/projects/proyecto-estacion-servicio.jpg'
-import planta from '../assets/projects/planta-metalmecanica.jpg'
+import estadioElAlto from '../assets/projects/proyecto-estadio-el-alto.jpg'
 
 const PROJECTS = [
   {
@@ -14,10 +14,10 @@ const PROJECTS = [
     tag: 'Estéreo estructura',
   },
   {
-    img: cocib,
-    title: 'Nave Industrial COCIB',
-    place: 'Tarija',
-    tag: 'Industria metalmecánica',
+    img: estadio,
+    title: 'Remodelación Estadio Félix Capriles — ODESUR 2018',
+    place: 'Cochabamba',
+    tag: 'Obra civil',
   },
   {
     img: torres,
@@ -27,21 +27,21 @@ const PROJECTS = [
   },
   {
     img: domo,
-    title: 'Coliseo tipo domo',
-    place: 'Cochabamba',
-    tag: 'Estéreo estructura',
+    title: 'Coliseo de Basquet Guadalquivir',
+    place: 'Tarija',
+    tag: 'Obra civil + Metalmecánica',
   },
   {
     img: estacion,
     title: 'Estación de Servicio Urkupiña',
     place: 'Cochabamba',
-    tag: 'Obra civil + metalmecánica',
+    tag: 'Obra civil + Metalmecánica',
   },
   {
-    img: planta,
-    title: 'Planta propia de metalmecánica',
-    place: 'Cochabamba',
-    tag: 'Infraestructura propia',
+    img: estadioElAlto,
+    title: 'Estadio Municipal de El Alto',
+    place: 'El Alto',
+    tag: 'Obra civil + Metalmecánica',
   },
 ]
 
