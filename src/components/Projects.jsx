@@ -1,10 +1,10 @@
 import { MapPin } from 'lucide-react'
-import sanLuis from '../assets/projects/proyecto-san-luis-tarija.jpg'
-import estadio from '../assets/projects/proyecto-estadio-felix-capriles.jpg'
-import torres from '../assets/projects/proyecto-torres-shinahota.jpg'
-import domo from '../assets/projects/proyecto-coliseo-guadalquivir-tarija.jpg'
-import estacion from '../assets/projects/proyecto-estacion-servicio.jpg'
-import estadioElAlto from '../assets/projects/proyecto-estadio-el-alto.jpg'
+import sanLuis from '../assets/projects/proyecto-san-luis-tarija.webp'
+import estadio from '../assets/projects/proyecto-estadio-felix-capriles.webp'
+import torres from '../assets/projects/proyecto-torres-shinahota.webp'
+import domo from '../assets/projects/proyecto-coliseo-guadalquivir-tarija.webp'
+import estacion from '../assets/projects/proyecto-estacion-servicio.webp'
+import estadioElAlto from '../assets/projects/proyecto-estadio-el-alto.webp'
 
 const PROJECTS = [
   {
@@ -71,6 +71,7 @@ export default function Projects() {
               <img
                 src={p.img}
                 alt={`${p.title} — ${p.place}`}
+                loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />

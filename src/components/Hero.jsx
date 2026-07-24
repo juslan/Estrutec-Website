@@ -1,6 +1,6 @@
 import { ArrowRight } from 'lucide-react'
-import heroImg from '../assets/projects/hero-oficina-estrutec.jpg'
-import logo from '../assets/estrutec-logo-white.png'
+import heroImg from '../assets/projects/hero-oficina-estrutec.webp'
+import logo from '../assets/estrutec-logo-white.webp'
 import WhatsAppIcon from './icons/WhatsAppIcon'
 
 const WHATSAPP_URL =
@@ -13,6 +13,7 @@ export default function Hero() {
         <img
           src={heroImg}
           alt="Fachada de las oficinas centrales de Estrutec en Cochabamba"
+          fetchPriority="high"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-[#050507]/45" />

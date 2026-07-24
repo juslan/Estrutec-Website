@@ -1,5 +1,5 @@
 import { MapPin, Phone, Mail } from 'lucide-react'
-import icon from '../assets/estrutec-icon.png'
+import icon from '../assets/estrutec-icon.webp'
 import WhatsAppIcon from './icons/WhatsAppIcon'
 
 const MAPS_LINK =
@@ -18,7 +18,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="lg:col-span-2">
-            <img src={icon} alt="" className="h-12 w-auto mb-4" />
+            <img src={icon} alt="" loading="lazy" className="h-12 w-auto mb-4" />
             <p className="font-display text-xl font-extrabold text-white mb-2">ESTRUTEC S.R.L.</p>
             <p className="text-sm leading-relaxed max-w-sm">
               Empresa constructora boliviana fundada en 2005, especializada en obras civiles e

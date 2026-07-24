@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
-import logo from '../assets/estrutec-logo.png'
+import logo from '../assets/estrutec-logo.webp'
 import WhatsAppIcon from './icons/WhatsAppIcon'
 
 const LINKS = [

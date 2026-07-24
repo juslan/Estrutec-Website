@@ -1,5 +1,5 @@
 import { Target, Eye } from 'lucide-react'
-import stairsImg from '../assets/projects/nosotros-escalera.jpg'
+import stairsImg from '../assets/projects/nosotros-escalera.webp'
 
 export default function About() {
   return (
@@ -47,6 +47,7 @@ export default function About() {
             <img
               src={stairsImg}
               alt="Detalle de las escaleras en las oficinas de Estrutec, construidas por la propia empresa"
+              loading="lazy"
               className="rounded-xl shadow-xl w-full h-[420px] sm:h-[520px] object-cover"
             />
             <div className="absolute -bottom-6 -left-6 bg-brand-blue text-white rounded-lg px-6 py-4 shadow-lg hidden sm:block max-w-[220px]">

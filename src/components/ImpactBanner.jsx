@@ -1,4 +1,4 @@
-import towerImg from '../assets/projects/hero-torre-alta-tension.jpg'
+import towerImg from '../assets/projects/hero-torre-alta-tension.webp'
 
 export default function ImpactBanner() {
   return (
@@ -6,6 +6,7 @@ export default function ImpactBanner() {
       <img
         src={towerImg}
         alt="Equipo de Estrutec montando una torre de alta tensión"
+        loading="lazy"
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-[#050507]/55" />
